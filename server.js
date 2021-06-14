@@ -15,6 +15,9 @@ app.use(morgan("tiny")); // this means "justvthe vare minimum logging version"
 // Every requests that comes through this application we want to run it through this morgan logging middleware.
 //All morgan will do is look for what kind of HTTP request it was, It will look what rout is being sent to our application, and then it will log how long the application took and a little bit of metadata about the request itself
 
+// (1)
+app.use(express.json()); // this will make sure that everytime we sent a post reuqest, express will parse that request as JSON. So by adding this additional middleware into pur express pipeline, we can now sent POST resuqests that include a request dot body
+
 app.use("/voting", votingRouter); // we are attaching the votingRouter to "/voting" endpoint. //! this is also a route.
 
 //! End Middleware
