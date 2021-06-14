@@ -32,8 +32,6 @@ class GiftExchnage {
 			retu.push([users[randomPair1], users[randomPair2]]);
 		}
 
-		console.log(retu);
-
 		return retu;
 	}
 

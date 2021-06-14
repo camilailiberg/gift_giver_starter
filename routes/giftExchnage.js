@@ -14,7 +14,7 @@ router.post("/pairs", async (req, res, next) => {
 	const users = req.body.names;
 
 	// calling pairs method in giftExchange.js
-	pairs = await GiftExchnage.pairs(users);
+	let pairs = await GiftExchnage.pairs(users);
 
 	res.status(200).json(pairs);
 });
