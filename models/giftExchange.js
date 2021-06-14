@@ -2,7 +2,7 @@ class GiftExchnage {
 	// This will pass the list of users that implements an algorithm responsible for randomly pairing users together.
 	// The Math.random function in JavaScript should be useful here.
 	// Make sure this method returns an array of arrays. Each nested array should contain a pair of randomly matched users.
-	static async pairs(users, res) {
+	static async pairs(users) {
 		// array that will hold indexes that have alredy been paired together
 		let alreadyPaired = [];
 		// array of pairs that will be returned
@@ -32,7 +32,9 @@ class GiftExchnage {
 			retu.push([users[randomPair1], users[randomPair2]]);
 		}
 
-		res.status(200).json(retu);
+		console.log(retu);
+
+		return retu;
 	}
 
 	static async traditional(users) {}
