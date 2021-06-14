@@ -1,6 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
-const giftExchnage = require("./routes/giftExchange");
+const giftExchnage = require("./routes/giftExchnage");
 
 const app = express();
 
