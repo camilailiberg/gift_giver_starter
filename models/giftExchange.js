@@ -37,7 +37,15 @@ class GiftExchnage {
 		return retu;
 	}
 
-	static async traditional(users) {}
+	static async traditional(users) {
+		let retu = [];
+
+		for (var i = 0; i < users.length; i = i + 2) {
+			retu.push(users[i] + " is giving a gift to " + users[i + 1]);
+		}
+
+		return retu;
+	}
 }
 
 module.exports = GiftExchnage;

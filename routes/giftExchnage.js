@@ -1,4 +1,5 @@
 const express = require("express");
+const { traditional } = require("../models/giftExchange");
 const router = express.Router();
 const GiftExchnage = require("../models/giftExchange");
 
@@ -19,7 +20,11 @@ router.post("/pairs", async (req, res, next) => {
 });
 
 router.post("/traditional", async (req, res, next) => {
-	// GiftExchnage.traditional(users);
+	const users = req.body.names;
+
+	let traditional = await GiftExchnage.traditional(users);
+
+	res.status(200).json(traditional);
 });
 
 module.exports = router;
