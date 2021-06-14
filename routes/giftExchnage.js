@@ -13,11 +13,11 @@ router.post("/pairs", async (req, res, next) => {
 	const users = req.body.names;
 
 	// calling pairs method in giftExchange.js
-	GiftExchnage.pairs(users);
+	GiftExchnage.pairs(users, res);
 
-	res.status(200).json({
-		sucess: "200",
-	});
+	// res.status(200).json({
+	// 	sucess: "200",
+	// });
 });
 
 router.post("/traditional", async (req, res, next) => {
